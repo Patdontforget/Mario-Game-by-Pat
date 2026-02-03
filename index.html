@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Super Mario Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="info-panel">
+            <div class="info-item lives">❤️ ชีวิต: <span id="lives">3</span></div>
+            <div class="info-item timer">⏱️ เวลา: <span id="timer">60</span>s</div>
+            <div class="info-item score">⭐ คะแนน: <span id="score">0</span></div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        
+        <div class="instructions">
+            <h3>🎮 วิธีเล่น</h3>
+            <p>
+                <strong>กด SPACE</strong> หรือ <strong>คลิกหน้าจอ</strong> เพื่อกระโดด<br>
+                หลีกเลี่ยงอุปสรรค (กระบอง, นก, เมฆ) และเก็บคะแนนให้ได้มากที่สุดภายใน 60 วินาที!<br>
+                มีชีวิต 3 ชีวิต - เมื่อหมดชีวิตต้องโหลดหน้าใหม่
+            </p>
+        </div>
+    </div>
+    
+    <div class="game-over-overlay" id="gameOverOverlay">
+        <div class="game-over-panel">
+            <h2 id="gameOverTitle">เกมจบ!</h2>
+            <p id="gameOverMessage">คะแนนของคุณ: <span id="finalScore">0</span></p>
+            <p id="livesLeft"></p>
+            <button class="restart-btn" id="restartBtn">เริ่มใหม่</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
